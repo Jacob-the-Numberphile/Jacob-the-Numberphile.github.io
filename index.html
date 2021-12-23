@@ -8,15 +8,39 @@
 
     <style>
         img{
-            width: 120px;
+            width: 550px;
             float: left;
-            border-radius: 60px;
+            border-radius: 10px;
+            Object-fit: cover;
     
 
         }
-        p.intro{
+
+        
+
+        h2.about_me{
             padding-top: 15em;
         }
+        p.links{
+            float:right;
+            font-size: 25px;
+        }
+
+
+        div.front_end{
+            background-color: #f2f2f2;
+            width: 99%;
+            height: 100%;
+            padding-right: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+
+
 
 
 
@@ -28,15 +52,41 @@
 
 <body>
 
-    
+    <div class="front_end">
 
     <h1>Jacob McGraw; Future Data Scientist</h1>
 
 
 
-    <img src="images/selfie.jpg" alt="Professional self-portriat"/>
+    <p class="links">
+        <a href="#about_me">About Me</a><br>
+        <a href="#education">Education</a><br>
+        <a href=#work >Work Experiance & Research Projects</a><br>
+        <a href=#skls>Skills</a><br>
+        <a href="https://github.com/Jacob-the-Numberphile?tab=repositories">My Github Repositories</a><br>
+        <a href="contact.html">Contact Me!</a>
 
-    <a href="education">Education</a>
+        
+
+
+    </p>
+
+
+
+    
+
+
+
+    <img src="images/desktop bg.png" alt="Professional self-portriat"/>
+
+    </div>
+
+    
+
+    <h2 class="about_me">About Me</h2>
+
+
+
 
     
     <p class="intro"> 
@@ -50,8 +100,8 @@
     </p>
 
 
-    <h2>Education</h2>
-    <p class="education">
+    <h2 id="education">Education</h2>
+    <p class="my_education">
         I am currently a senior at the University of San Jose State. I am pursuing a B.S. in Mathematics and Statistics from San Jose State University.
         I have taken nearly all of my probability and statistics courses and have applied them in many interesting data science projects.
         I have a 3.7 GPA and have been inducted into the Phi Kappa Phi Honors Society for being in the top 5% of juniors in that semester. 
@@ -59,7 +109,7 @@
     </p>
     Transcript available on request.
 
-    <h2>Work Experience and Research Projects</h2>
+    <h2 id="work">Work Experience and Research Projects</h2>
     <h3>CAMCOS Project</h3>
     <p class="camcos">
         I spent a semester working in CAMCOS, an intensive applied mathematics project contracted by Ethereum. The project involved a new pricing mechanism
@@ -67,24 +117,79 @@
          the project was acquiring a node to obtain data, cleaning the data, and using various graphs and statistical techniques to visualize and analyze the data. 
          Furthermore, I had to learn a lot about how the Ethereum marketplace works, along with the various terms, jargon, and specific economic behaviors that are 
          associated with a cryptocurrency-based economy. I tested the effectiveness of EIP-1559 by running simulations of the different pricing mechanisms to determine 
-         if the intended effect was reached. 
+         if the intended effect was reached. Furthermore, I analysed the fluctuation of the gas and gas prices of the transaction fee marketplace to determine the overall 
+         effectiveness of the EIP-1559 pricing mechanism. The heart of the CAMCOS project was modeling internal user valuations, a metric that intrinsically models how much a user 
+         wants their transaction included into the blockchain. Throughout my time at CAMCOS, I utalized hypothesis and distribution testing between the valuations of the different 
+         pricing regimes and used MLE to generate appropriate paramaters for each pricing regime; then, by collaborating with the theory team, we were able to generate a optimal bidding funtion
+            for the EIP-1559 pricing mechanism. Furthermore, I used the Python programming language and an associated shared repository (Github) to priovide visualizations of the
+             various aspects of EIP-1559, from miner revenue vs transaction fees, block size oscilations over time, gas user per block over time, and the valuations of the different pricing regimes.
+             The project culminated in an oral presentation of our team's findings to Ethereum.
     </p>
 
     <a href="https://github.com/mustafaqazi916/camcos">Link to Associated Repository</a>
 
+    <h3>Student Research Projects</h3>
+    <p class="academic_research">
+        In my time at San Jose State University I have had the pleasure of working on larger group projects that utalize programming, data analysis, and statistical techniques.
+       These projects are:
+    </p>
+
+    <h4>Historical Milton Friedman Data Analysis Project</h4>   
+    <p class="milton_friedman">
+        One of my favorite projects at San Jose State University is the Historical Milton Friedman Data Analysis Project. This project was a group project that involved myself working with a group of 
+        individuals in the second semester Applied Statistics course at San Jose State University. While this was a group project, the data cleaning and analysis was done by myself. The project consisted of aquiring the dataset
+        and subsetting the observations to the most current year to get the most consistent amount of non-empty values. Afterwords, the entriess that still had empty values in their remaining features had their aggregated values
+        used as a substitute. Afterwords, the deleniation between developed and developing countries was included into the dataset for 2006 (as that feature had originally been ommited), which lead to a fascninating discovery. After appropraite
+        outlier removal and statistical testing, a very strong multifactor linear correlation was found between the average number of procedures to start a buisness and GDP per capita between developed and developing countries. Essentially, 
+        the more procedures to start a buisness, the less GDP per capita the country had.
+    </p>
+    <a href="https://github.com/Jacob-the-Numberphile/Applied_Statistics">Link to Associated Repository</a>
+
+    <h4>Covid 19 Data Analysis Project</h4>
+    <p class="covid_19">
+        Another project that I worked on at San Jose State University was the Covid 19 Data Analysis Project. This project was much more of a collaborative effort thatn the Milton Friedman Data Analysis Project; however, my role in this project 
+        was still very involved and rewarding. In this semester project, our goal ws to aquire, analyse, and visualize the data from the COVID-19 pandemic in the state of California over various counties over time. Also, my visualizations deliniated between 
+        the pre and post vaccine periods, which yielded interesting results After one of the group members cleaned the data, my goal was to visualize the relationship betweeen hospitolizations and unemployment rates in the early months of the Covid Pandemic 
+        in various ways. First, illustrated the realtionship with a scatterplot, which revealed that for the pre-vaccine period, the hospitolizations tend to stay below 10,000 and have a high variability in terms of emplyment. In contranst, the post vaccine 
+        unemplyment rated universally stay at 10-12%, while experiancing a high variability in terms of hospitolizations. Furthermore, I analyzed the two features over time, which revealed an initial spike in unemployment which gradually reduces to a normal 
+        period over time, and hospitolizations gradually increasing until a sudden and pronounced spike in the October to to February time period.
+
+    </p>
+
+    <a href="https://github.com/Jacob-the-Numberphile/Python-semester-project">Link to Associated Repository</a>
+
+
+
+
     <h3>Homework Grader</h3>
     <p class="hw_grader">
         I have experience as a Homework grader for an upper-division vector calculus course from August 2020 to December 2020. My duties involved facilitating breakout
-         rooms in class at the professor’s discretion and grading homework and exams pursuant to the professor’s rubric. I also assisted in proctoring and grading final exams.
+         rooms in class at the professors discretion and grading homework and exams pursuant to the professor’s rubric. I also assisted in proctoring and grading final exams.
     </p>
 
     <h3>Math Tutor</h3>
     <p class="math_tutor">
-        1 semester of experience working as a math tutor for Evergreen Valley College for 5 months (January 2019-May2019). I learned both leadership skills, public speaking, 
+        1 semester of experience working as a math tutor for Evergreen Valley College for 5 months (January 2019-May 2019). I learned both leadership skills, public speaking, 
         and how to communicate with a wide variety of students while teaching math at Evergreen Valley College. I would teach students in group settings, one on one settings,
          as well as a drop-in and drop-out setting. I taught students on a variety of courses, from elementary algebra to upper-division linear algebra. Twice a week I would also
           provide in-class assistance for a mathematics professor, I would assist the professor with day-to-day tasks as well as provide help to students both in and out of the classroom. 
     </p>
+
+    <h2 id="skls">Skills</h2>
+    <p class="skills">
+        I have a wide range of skills that I have acquired over my time at San Jose State University and a desire to expand my skillbase. I have experience in the following areas:<br>
+        <br>
+        Mathematical document writing using LaTeX<br>
+        Microsoft Excell/Apple Numbers<br>
+        Java coding<br>
+        R coding<br>
+        Statistical analysis using JMP<br>
+        Statistical analysis using Minitab<br>
+        Python coding<br>
+        SQL coding<br>
+        Matlab coding<br>
+        HTML/CSS coding<br>
+
 
     
 
